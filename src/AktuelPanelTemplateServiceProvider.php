@@ -1,6 +1,6 @@
 <?php
 
-namespace MyVendor\MyPackage;
+namespace Myusuf\AktuelPanelTemplate;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Route;
