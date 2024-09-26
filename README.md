@@ -1,2 +1,2 @@
-# AktuelPanelTemplate
-Kurumsal projelerimizde kullanacağımız Laravel - Metronic proje şablonu
+# MyLaravelTemplate
+Laravel projelerim için kullanacağım default template

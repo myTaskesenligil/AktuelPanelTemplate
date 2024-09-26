@@ -1,0 +1,19 @@
+{
+    "name": "myusuft/aktuelpaneltemplate",
+    "description": "Aktuel Panel Template for Laravel",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Myusuf\\AktuelPanelTemplate\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Myusuf\\AktuelPanelTemplate\\AktuelPanelTemplateServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
