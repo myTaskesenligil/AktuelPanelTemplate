@@ -11,7 +11,7 @@ class AktuelPanelTemplateServiceProvider extends ServiceProvider
     {
         // Paketin kayıt işlemleri
         // Middleware'i kaydet
-        $this->app['router']->aliasMiddleware('check.module.permission', \MyVendor\MyPackage\Http\Middleware\CheckModulePermission::class);
+        $this->app['router']->aliasMiddleware('check.module.permission', \Myusuf\AktuelPanelTemplate\Http\Middleware\CheckModulePermission::class);
     }
 
 
