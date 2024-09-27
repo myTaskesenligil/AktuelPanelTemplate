@@ -1,14 +1,15 @@
 <?php
 
-namespace Myusuf\AktuelPanelTemplate\Console;
+namespace Myusuf\AktuelPanelTemplate\Console\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Filesystem\Filesystem;
+use Illuminate\Support\Facades\File;
 
 class InstallAktuelPanelTemplate extends Command
 {
-    protected $signature = 'aktuel:install';
-    protected $description = 'Aktuel Panel Template dosyalarını projeye kopyalar.';
+    // Komutun ismi ve açıklaması
+    protected $signature = 'aktuelpanel:install';
+    protected $description = 'Aktuel Panel Template dosyalarını ilgili yerlere kopyalar';
 
     public function __construct()
     {
@@ -17,40 +18,49 @@ class InstallAktuelPanelTemplate extends Command
 
     public function handle()
     {
-        $filesystem = new Filesystem();
+        $this->info('Aktuel Panel Template dosyaları kopyalanıyor...');
 
-        // Klasörlerin kopyalanacağı yerler
-        $this->copyDirectory('assets', public_path('assets'));
-        $this->copyDirectory('migrations', database_path('migrations'));
-        $this->copyDirectory('routes', base_path('routes'));
-        $this->copyDirectory('src/Http/Controllers', app_path('Http/Controllers'));
-        $this->copyDirectory('src/Http/Middleware', app_path('Http/Middleware'));
-        $this->copyDirectory('src/Models', app_path('Models'));
-        $this->copyDirectory('src/Services', app_path('Services'));
-        $this->copyDirectory('src/Views', resource_path('views'));
+        // Assets dosyalarını kopyala
+        $this->copyDirectory(__DIR__.'/../../../assets', public_path('vendor/my-package'));
 
-        // Kök dizine taşınacak dosyalar
-        $this->copyFile('.htaccess', base_path('.htaccess'));
-        $this->copyFile('server.php', base_path('server.php'));
+        // .htaccess ve server.php dosyalarını kopyala
+        $this->copyFile(__DIR__.'/../../../.htaccess', base_path('.htaccess'));
+        $this->copyFile(__DIR__.'/../../../server.php', base_path('server.php'));
+
+        // Migrations klasörünü kopyala
+        $this->copyDirectory(__DIR__.'/../../../migrations', database_path('migrations'));
+
+        // Routes klasöründen web.php ve panel.php dosyalarını kopyala
+        $this->copyFile(__DIR__.'/../../../routes/web.php', base_path('routes/web.php'));
+        $this->copyFile(__DIR__.'/../../../routes/panel.php', base_path('routes/panel.php'));
+
+        // Controllers, Middleware, Models, Services ve Views klasörlerini kopyala
+        $this->copyDirectory(__DIR__.'/../../../src/Http/Controllers', app_path('Http/Controllers'));
+        $this->copyDirectory(__DIR__.'/../../../src/Http/Middleware', app_path('Http/Middleware'));
+        $this->copyDirectory(__DIR__.'/../../../src/Models', app_path('Models'));
+        $this->copyDirectory(__DIR__.'/../../../src/Services', app_path('Services'));
+        $this->copyDirectory(__DIR__.'/../../../src/Views', resource_path('views'));
 
         $this->info('Aktuel Panel Template başarıyla yüklendi.');
     }
 
-    private function copyDirectory($src, $dest)
+    private function copyDirectory($source, $destination)
     {
-        $filesystem = new Filesystem();
-        if ($filesystem->isDirectory(__DIR__ . '/../../../' . $src)) {
-            $filesystem->copyDirectory(__DIR__ . '/../../../' . $src, $dest);
-            $this->info($src . ' klasörü kopyalandı.');
+        if (File::isDirectory($source)) {
+            File::copyDirectory($source, $destination);
+            $this->info("Dizin kopyalandı: {$source} -> {$destination}");
+        } else {
+            $this->error("Dizin bulunamadı: {$source}");
         }
     }
 
-    private function copyFile($src, $dest)
+    private function copyFile($source, $destination)
     {
-        $filesystem = new Filesystem();
-        if ($filesystem->exists(__DIR__ . '/../../../' . $src)) {
-            $filesystem->copy(__DIR__ . '/../../../' . $src, $dest);
-            $this->info($src . ' dosyası kopyalandı.');
+        if (File::exists($source)) {
+            File::copy($source, $destination);
+            $this->info("Dosya kopyalandı: {$source} -> {$destination}");
+        } else {
+            $this->error("Dosya bulunamadı: {$source}");
         }
     }
 }

@@ -3,24 +3,20 @@
 namespace Myusuf\AktuelPanelTemplate;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Route;
+use Myusuf\AktuelPanelTemplate\Console\Commands\InstallAktuelPanelTemplate;
 
 class AktuelPanelTemplateServiceProvider extends ServiceProvider
 {
     public function register()
     {
-
+        // Komutları kaydedelim
+        $this->commands([
+            InstallAktuelPanelTemplate::class,
+        ]);
     }
-
 
     public function boot()
     {
-        // Paketinizin asset ve konfigürasyon dosyalarını kopyalayan artisan komutunu burada tanımlarız.
-        if ($this->app->runningInConsole()) {
-            $this->commands([
-                Console\InstallAktuelPanelTemplate::class,
-            ]);
-        }
+        // Diğer boot işlemleri burada olabilir
     }
 }
-
