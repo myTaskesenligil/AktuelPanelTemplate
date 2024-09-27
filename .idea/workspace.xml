@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="10fe3e40-906f-4745-828e-ba13cade0758" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Console/InstallAktuelPanelTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Console/Commands/InstallAktuelPanelTemplate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +71,7 @@
       <option name="presentableId" value="Default" />
       <updated>1727335168438</updated>
       <workItem from="1727335169798" duration="3800000" />
-      <workItem from="1727440600694" duration="1572000" />
+      <workItem from="1727440600694" duration="3302000" />
     </task>
     <servers />
   </component>
