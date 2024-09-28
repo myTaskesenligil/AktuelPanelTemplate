@@ -18,7 +18,11 @@ use App\Http\Controllers\Site\SitePageController;
 //     return view('welcome');
 // });
 
-Route::get('/', [SitePageController::class, 'index'])->name('home');
+//Route::get('/', [SitePageController::class, 'index'])->name('home');
+
+Route::get('/', function() {
+    return redirect('/panel');
+});
 
 Route::prefix('panel')->group(function () {
     Route::middleware('web')->group(base_path('routes/panel.php'));
