@@ -21,14 +21,15 @@ class InstallAktuelPanelTemplate extends Command
         $this->info('Aktuel Panel Template dosyaları kopyalanıyor...');
 
         // Assets dosyalarını kopyala
-        $this->copyDirectory(__DIR__.'/../../../assets', public_path('vendor/my-package'));
+        $this->copyDirectory(__DIR__.'/../../../assets/panel-assets', public_path('/'));
 
         // .htaccess ve server.php dosyalarını kopyala
         $this->copyFile(__DIR__.'/../../../.htaccess', base_path('.htaccess'));
         $this->copyFile(__DIR__.'/../../../server.php', base_path('server.php'));
 
-        // Migrations klasörünü kopyala
-        $this->copyDirectory(__DIR__.'/../../../migrations', database_path('migrations'));
+        // Database klasörünü kopyala
+        $this->copyDirectory(__DIR__ . '/../../../database/migrations', database_path('migrations'));
+        $this->copyDirectory(__DIR__ . '/../../../database/seeders', database_path('seeders'));
 
         // Routes klasöründen web.php ve panel.php dosyalarını kopyala
         $this->copyFile(__DIR__.'/../../../routes/web.php', base_path('routes/web.php'));
@@ -40,6 +41,7 @@ class InstallAktuelPanelTemplate extends Command
         $this->copyDirectory(__DIR__.'/../../../src/Models', app_path('Models'));
         $this->copyDirectory(__DIR__.'/../../../src/Services', app_path('Services'));
         $this->copyDirectory(__DIR__.'/../../../src/Views', resource_path('views'));
+        $this->copyDirectory(__DIR__.'/../../../src/lang', resource_path('lang'));
 
         $this->info('Aktuel Panel Template başarıyla yüklendi.');
     }

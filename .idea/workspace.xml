@@ -5,8 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10fe3e40-906f-4745-828e-ba13cade0758" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/panel-assets/assets/media/images/kodaktuel-color-logo-transparent.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/panel-assets/assets/media/images/kodaktuel-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/panel-assets/assets/media/images/kodaktuel-white-logo-transparent.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/AuthModuleSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/UserSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lang/tr/messages.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel-assets/assets/media/images/ahbv-circle-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel-assets/assets/media/images/ahbv-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel-assets/assets/media/images/ahbv-logo-beyaz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/panel-assets/assets/media/images/ahbv-logo-kirmizi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/2024_02_28_124014_create_auth_groups_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_02_28_124014_create_auth_groups_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/2024_02_28_124040_create_auth_group_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_02_28_124040_create_auth_group_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/2024_02_28_124053_create_auth_group_modules_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_02_28_124053_create_auth_group_modules_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/2024_02_28_124102_create_auth_modules_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_02_28_124102_create_auth_modules_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/2024_04_29_074226_create_logs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2024_04_29_074226_create_logs_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Console/Commands/InstallAktuelPanelTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Console/Commands/InstallAktuelPanelTemplate.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +57,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Applications/MAMP/htdocs/AktuelPanelTemplate",
+    "last_opened_file_path": "/Applications/MAMP/htdocs/AktuelPanelTemplate/src",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -51,7 +67,15 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/assets/panel-assets/assets/media/images" />
+      <recent name="$PROJECT_DIR$/database" />
+      <recent name="$PROJECT_DIR$/src/Http/Controllers" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/database" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/Console/Commands" />
     </key>
   </component>
@@ -71,7 +95,7 @@
       <option name="presentableId" value="Default" />
       <updated>1727335168438</updated>
       <workItem from="1727335169798" duration="3800000" />
-      <workItem from="1727440600694" duration="3302000" />
+      <workItem from="1727440600694" duration="5184000" />
     </task>
     <servers />
   </component>
