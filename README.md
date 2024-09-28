@@ -42,6 +42,14 @@ Paket yüklendikten sonra aşağıki komut ile paket içerisindeki dosya ve klas
 ```bash
 php artisan aktuelpanel:install
 ```
+Veritabanı dosyaları için migrate işlemini yapın
+```bash
+php artisan migrate
+```
+Son olarak veritabanı dosyalarına başlangıç verilerini ekleyin.
+```bash
+php artisan db:seed
+```
 
 ## Geliştirici
 
