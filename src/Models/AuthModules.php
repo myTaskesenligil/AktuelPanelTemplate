@@ -1,11 +1,9 @@
 <?php
 
-namespace App\Models\Panel;
+namespace App\Models;
 
-use App\Models\Panel\AuthGroups;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use App\Models\Panel\AuthModules;
+use Illuminate\Database\Eloquent\Model;
 
 class AuthModules extends Model
 {
@@ -29,7 +27,7 @@ class AuthModules extends Model
 
     public function childModules()
     {
-        return $this->hasMany(AuthModules::class, 'amParentMenuId', 'id');
+        return $this->hasMany(\App\Models\AuthModules::class, 'amParentMenuId', 'id');
     }
 
     public function hasPermission($groupId)
